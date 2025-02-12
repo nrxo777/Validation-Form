@@ -1,0 +1,35 @@
+body {
+    background-color: #1E201E;
+    color: #ECDFCC;
+    margin: 10px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin: 7px;
+    padding: 19px;
+    border: 3px;
+    border-radius: 10px;
+    background-color: #697565;
+}
+
+form {
+    margin: 7px;
+    margin-top: 20px;
+    padding: 19px;
+    border: 3px;
+    border-radius: 10px;
+    background-color: #697565;
+}
+
+#post-code, #name, #email, #phone, #btn {
+    background-color: #ECDFCC;
+    color: #1E201E;
+    border-color: #3C3D37;
+}
+
+#btn:hover {
+    background-color: #1E201E;
+    color: #ECDFCC ;
+}
