@@ -1,6 +1,7 @@
 // ********** UI Elements **********
 
 const button = document.querySelector('#btn');
+const message = document.querySelector('#msg');
 
 // ********** SUBMISSION **********
 
@@ -10,7 +11,7 @@ button.addEventListener('click', function(e) {
     let user_name = document.querySelector('#name').value;
     let email = document.querySelector('#email').value;
     let phone = document.querySelector('#phone').value;
-    let post_code = document.querySelector('#post-code').value;
+    let postal_code = document.querySelector('#postal-code').value;
 
     let email_regex = /^([a-zA-Z0-9].?)+[^.]@([a-zA-Z0-9].?)+[^.]$/;
     let phone_regex = /^(?:\+88)?01[0-9]{9}$/;
@@ -19,24 +20,23 @@ button.addEventListener('click', function(e) {
     // ********** Input Section **********
 
     if(user_name === '') {                      
-        alert("Naughty Naughty, put some name..")
+        alert("Add Your Name")
     } else if (email === '') {
-        alert("Naughty Naughty, put some email id..")
+        alert("Add Your Email ID")
     } else if (phone === '') {
-        alert("Naughty Naughty, put some phone number..")
-    } else if (post_code === '') {
-        alert("Naughty Naughty, put some post code..")
+        alert("Add Your Phone Number")
+    } else if (postal_code === '') {
+        alert("Add Your Postal Code")
     } 
 
     // ********** Validation Section **********
 
     else if (!email_regex.test(email)) {      
-        alert('Wrong email id')
+        alert('❌Invalid Email ID')
     } else if(!phone_regex.test(phone)) {
-        alert('Wrong phone number')
-    } else if(!postal_regex.test(post_code)) {
-        
-        alert('Wrong postal code')
+        alert('❌Invalid Phone Number')
+    } else if(!postal_regex.test(postal_code)) {
+        alert('❌Invalid Postal Code')
     } 
     
     // ********** Data PRINT **********
@@ -47,10 +47,18 @@ button.addEventListener('click', function(e) {
             user_name: user_name,
             email: email,
             phone: phone,
-            post_code: post_code
+            postal_code: postal_code
         }
             
         console.log('Form Data: ', form_data);
+        // confirm("✅Data Successfully Printed on Console")
+        
+        message.innerHTML = "✅Data Successfully Printed on Console";
+        
+        setTimeout( () => {
+            message.remove();
+        }, 2000);
+
     }
 
     form_reset()
@@ -64,5 +72,5 @@ function form_reset(e) {
     document.querySelector('#name').value = '';
     document.querySelector('#email').value = '';
     document.querySelector('#phone').value = '';
-    document.querySelector('#post-code').value = '';
+    document.querySelector('#postal-code').value = '';
 }
