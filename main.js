@@ -53,17 +53,21 @@ button.addEventListener('click', function(e) {
         console.log('Form Data: ', form_data);
         // confirm("✅Data Successfully Printed on Console")
         
-        message.innerHTML = "✅Data Successfully Printed on Console";
         
-        setTimeout( () => {
-            message.remove();
-        }, 2000);
-
+        submit_msg();
     }
 
     form_reset()
 
 });
+
+function submit_msg() {
+    message.innerHTML = "✅Data Successfully Printed on Console";
+        
+    setTimeout( () => {
+        message.innerHTML = '';
+    }, 1500);
+}
 
 
 // ********** Form Reset **********
@@ -73,4 +77,5 @@ function form_reset(e) {
     document.querySelector('#email').value = '';
     document.querySelector('#phone').value = '';
     document.querySelector('#postal-code').value = '';
+    // message.value = null;
 }
