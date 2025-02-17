@@ -20,37 +20,37 @@ button.addEventListener('click', function(e) {
     // ********** Input Section **********
 
     if(user_name === '') {                      
-        alert("Add Your Name")
+        alert("'Not valid.' Do this properly ❌")
     } else if (email === '') {
-        alert("Add Your Email ID")
+        alert("'Not valid.' Do this properly ❌")
     } else if (phone === '') {
-        alert("Add Your Phone Number")
+        alert("'Not valid.' Do this properly ❌")
     } else if (postal_code === '') {
-        alert("Add Your Postal Code")
+        alert("'Not valid.' Do this properly ❌")
     } 
 
     // ********** Validation Section **********
 
     else if (!email_regex.test(email)) {      
-        alert('❌Invalid Email ID')
+        alert("'Not valid.' Do this properly ❌")
     } else if(!phone_regex.test(phone)) {
-        alert('❌Invalid Phone Number')
+        alert("'Not valid.' Do this properly ❌")
     } else if(!postal_regex.test(postal_code)) {
-        alert('❌Invalid Postal Code')
+        alert("'Not valid.' Do this properly ❌")
     } 
     
     // ********** Data PRINT **********
     
     else {
 
-        let form_data = {
-            user_name: user_name,
-            email: email,
-            phone: phone,
-            postal_code: postal_code
-        }
+        // let form_data = {
+        //     user_name: user_name,
+        //     email: email,
+        //     phone: phone,
+        //     postal_code: postal_code
+        // }
             
-        console.log('Form Data: ', form_data);
+        // console.log('Form Data: ', form_data);
         // confirm("✅Data Successfully Printed on Console")
         
         
@@ -62,7 +62,7 @@ button.addEventListener('click', function(e) {
 });
 
 function submit_msg() {
-    message.innerHTML = "✅Data Successfully Printed on Console";
+    message.innerHTML = "Valid info ✅";
         
     setTimeout( () => {
         message.innerHTML = '';

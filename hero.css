@@ -23,7 +23,7 @@ form {
     background-color: #697565;
 }
 
-#post-code, #name, #email, #phone, #btn {
+#post-code, #name, #email, #phone, #btn, #postal-code {
     background-color: #ECDFCC;
     color: #1E201E;
     border-color: #3C3D37;
